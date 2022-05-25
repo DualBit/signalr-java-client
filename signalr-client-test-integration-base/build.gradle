@@ -1,6 +1,11 @@
 apply plugin: 'java'
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':signalr-client-sdk')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':signalr-client-sdk')
+    implementation 'com.google.code.gson:gson:2.9.0'
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
